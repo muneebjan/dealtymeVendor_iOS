@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186F313D2225315B0021AE98 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F313B2225315B0021AE98 /* AuthServices.swift */; };
+		186F313E2225315B0021AE98 /* Apis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F313C2225315B0021AE98 /* Apis.swift */; };
+		186F31412225326D0021AE98 /* vendorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F31402225326D0021AE98 /* vendorInfo.swift */; };
+		186F314422254D5F0021AE98 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314322254D5F0021AE98 /* MainViewController.swift */; };
+		186F314622255B0A0021AE98 /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314522255B0A0021AE98 /* MyTabBarViewController.swift */; };
+		186F314822255BF00021AE98 /* redeemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314722255BF00021AE98 /* redeemViewController.swift */; };
+		186F314A22255C000021AE98 /* savedDealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314922255C000021AE98 /* savedDealsViewController.swift */; };
+		186F314C22255C280021AE98 /* accountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314B22255C280021AE98 /* accountsViewController.swift */; };
+		186F314E222560AB0021AE98 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314D222560AB0021AE98 /* UserCell.swift */; };
 		188B04D82200574D00EB89C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B04D72200574D00EB89C0 /* AppDelegate.swift */; };
 		188B04DA2200574D00EB89C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B04D92200574D00EB89C0 /* ViewController.swift */; };
 		188B04DD2200574D00EB89C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B04DB2200574D00EB89C0 /* Main.storyboard */; };
@@ -16,9 +25,20 @@
 		188B04EE22005BAC00EB89C0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B04EC22005BAC00EB89C0 /* Extensions.swift */; };
 		188B04F3220063D400EB89C0 /* SignUpVendorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B04F2220063D400EB89C0 /* SignUpVendorViewController.swift */; };
 		188B04F522006ED600EB89C0 /* SignUpEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B04F422006ED600EB89C0 /* SignUpEmployeeViewController.swift */; };
+		F4123F3C07749C1D7976A835 /* Pods_dealTymeVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8048CD324A3EF5B7F5F904BC /* Pods_dealTymeVendor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C9C6E5D1331CCC23623D524 /* Pods-dealTymeVendor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dealTymeVendor.release.xcconfig"; path = "Pods/Target Support Files/Pods-dealTymeVendor/Pods-dealTymeVendor.release.xcconfig"; sourceTree = "<group>"; };
+		186F313B2225315B0021AE98 /* AuthServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
+		186F313C2225315B0021AE98 /* Apis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apis.swift; sourceTree = "<group>"; };
+		186F31402225326D0021AE98 /* vendorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vendorInfo.swift; sourceTree = "<group>"; };
+		186F314322254D5F0021AE98 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		186F314522255B0A0021AE98 /* MyTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
+		186F314722255BF00021AE98 /* redeemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redeemViewController.swift; sourceTree = "<group>"; };
+		186F314922255C000021AE98 /* savedDealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = savedDealsViewController.swift; sourceTree = "<group>"; };
+		186F314B22255C280021AE98 /* accountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountsViewController.swift; sourceTree = "<group>"; };
+		186F314D222560AB0021AE98 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		188B04D42200574D00EB89C0 /* dealTymeVendor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dealTymeVendor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B04D72200574D00EB89C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188B04D92200574D00EB89C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +50,8 @@
 		188B04EC22005BAC00EB89C0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		188B04F2220063D400EB89C0 /* SignUpVendorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVendorViewController.swift; sourceTree = "<group>"; };
 		188B04F422006ED600EB89C0 /* SignUpEmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpEmployeeViewController.swift; sourceTree = "<group>"; };
+		1DFE58DEFAEFD4ADF3D8B8B1 /* Pods-dealTymeVendor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dealTymeVendor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dealTymeVendor/Pods-dealTymeVendor.debug.xcconfig"; sourceTree = "<group>"; };
+		8048CD324A3EF5B7F5F904BC /* Pods_dealTymeVendor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dealTymeVendor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +59,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4123F3C07749C1D7976A835 /* Pods_dealTymeVendor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186F313F222531610021AE98 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				186F313C2225315B0021AE98 /* Apis.swift */,
+				186F313B2225315B0021AE98 /* AuthServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		186F3142222532710021AE98 /* VenderModel */ = {
+			isa = PBXGroup;
+			children = (
+				186F31402225326D0021AE98 /* vendorInfo.swift */,
+			);
+			path = VenderModel;
+			sourceTree = "<group>";
+		};
+		186F314F222560AE0021AE98 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				186F314D222560AB0021AE98 /* UserCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		188B04CB2200574D00EB89C0 = {
 			isa = PBXGroup;
 			children = (
 				188B04D62200574D00EB89C0 /* dealTymeVendor */,
 				188B04D52200574D00EB89C0 /* Products */,
+				4950C9E25819FFAE0F66D334 /* Pods */,
+				EF4E10EC5C5EEAAC60F4D3DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +112,9 @@
 		188B04D62200574D00EB89C0 /* dealTymeVendor */ = {
 			isa = PBXGroup;
 			children = (
+				186F314F222560AE0021AE98 /* CustomCells */,
+				186F313F222531610021AE98 /* Services */,
+				186F3142222532710021AE98 /* VenderModel */,
 				188B04EF22005BBA00EB89C0 /* Extensions */,
 				188B04F122005BD100EB89C0 /* Controllers */,
 				188B04DB2200574D00EB89C0 /* Main.storyboard */,
@@ -88,8 +141,30 @@
 				188B04D92200574D00EB89C0 /* ViewController.swift */,
 				188B04F2220063D400EB89C0 /* SignUpVendorViewController.swift */,
 				188B04F422006ED600EB89C0 /* SignUpEmployeeViewController.swift */,
+				186F314522255B0A0021AE98 /* MyTabBarViewController.swift */,
+				186F314322254D5F0021AE98 /* MainViewController.swift */,
+				186F314722255BF00021AE98 /* redeemViewController.swift */,
+				186F314922255C000021AE98 /* savedDealsViewController.swift */,
+				186F314B22255C280021AE98 /* accountsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4950C9E25819FFAE0F66D334 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DFE58DEFAEFD4ADF3D8B8B1 /* Pods-dealTymeVendor.debug.xcconfig */,
+				0C9C6E5D1331CCC23623D524 /* Pods-dealTymeVendor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF4E10EC5C5EEAAC60F4D3DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8048CD324A3EF5B7F5F904BC /* Pods_dealTymeVendor.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 188B04E62200575500EB89C0 /* Build configuration list for PBXNativeTarget "dealTymeVendor" */;
 			buildPhases = (
+				CF813232FBCA89C7400BB8ED /* [CP] Check Pods Manifest.lock */,
 				188B04D02200574D00EB89C0 /* Sources */,
 				188B04D12200574D00EB89C0 /* Frameworks */,
 				188B04D22200574D00EB89C0 /* Resources */,
+				27DBE728AD5C1E03392AD3E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,17 +235,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27DBE728AD5C1E03392AD3E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-dealTymeVendor/Pods-dealTymeVendor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dealTymeVendor/Pods-dealTymeVendor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF813232FBCA89C7400BB8ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dealTymeVendor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		188B04D02200574D00EB89C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186F314622255B0A0021AE98 /* MyTabBarViewController.swift in Sources */,
 				188B04F522006ED600EB89C0 /* SignUpEmployeeViewController.swift in Sources */,
 				188B04DA2200574D00EB89C0 /* ViewController.swift in Sources */,
+				186F313E2225315B0021AE98 /* Apis.swift in Sources */,
+				186F314C22255C280021AE98 /* accountsViewController.swift in Sources */,
+				186F313D2225315B0021AE98 /* AuthServices.swift in Sources */,
+				186F314A22255C000021AE98 /* savedDealsViewController.swift in Sources */,
 				188B04ED22005BAC00EB89C0 /* ToastView.swift in Sources */,
+				186F314E222560AB0021AE98 /* UserCell.swift in Sources */,
+				186F314822255BF00021AE98 /* redeemViewController.swift in Sources */,
 				188B04D82200574D00EB89C0 /* AppDelegate.swift in Sources */,
 				188B04EE22005BAC00EB89C0 /* Extensions.swift in Sources */,
+				186F31412225326D0021AE98 /* vendorInfo.swift in Sources */,
 				188B04F3220063D400EB89C0 /* SignUpVendorViewController.swift in Sources */,
+				186F314422254D5F0021AE98 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +439,7 @@
 		};
 		188B04E72200575500EB89C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DFE58DEFAEFD4ADF3D8B8B1 /* Pods-dealTymeVendor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -330,6 +458,7 @@
 		};
 		188B04E82200575500EB89C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C9C6E5D1331CCC23623D524 /* Pods-dealTymeVendor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

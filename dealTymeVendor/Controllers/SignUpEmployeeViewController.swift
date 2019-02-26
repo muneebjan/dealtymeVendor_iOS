@@ -197,6 +197,14 @@ class SignUpEmployeeViewController: UIViewController {
                     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
                     navigationController?.navigationBar.tintColor = .black;
                     
+                    AuthServices.instance.vendor_EmployeeSignup(name: nameTextField.text!, phoneNumber: phoneNumberTextField.text!, password: passwordTextField.text!, vendorCode: venderCodeTextField.text!) { (success) in
+                        if(success){
+                            ToastView.shared.short(self.view, txt_msg: "signup successfull")
+                        }else{
+                            ToastView.shared.short(self.view, txt_msg: "signup Not successfull")
+                        }
+                    }
+                    
                     //                    print("email: \(userInstance.email)")
                     //                    AuthServices.instance.user_checkEmail(email: userInstance.email) { (success) in
                     //                        if(success){

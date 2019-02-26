@@ -52,13 +52,14 @@ class ViewController: UIViewController {
     let emailTextField: UITextField = {
         let tf = UITextField()
         tf.font = .systemFont(ofSize: 14)
+        tf.text = "shami@gmail.com"
         tf.attributedPlaceholder = NSAttributedString(string: "Email",
                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         tf.autocorrectionType = .no
         tf.backgroundColor = .white
         tf.textAlignment = .left
         tf.autocapitalizationType = .none
-        tf.keyboardType = .numberPad
+//        tf.keyboardType = .numberPad
         tf.layer.masksToBounds = false
         tf.clipsToBounds = true
         tf.translatesAutoresizingMaskIntoConstraints = false
@@ -67,6 +68,7 @@ class ViewController: UIViewController {
     
     let passwordTextField: UITextField = {
         let tf = UITextField()
+        tf.text = "12345"
         tf.font = .systemFont(ofSize: 14)
         tf.attributedPlaceholder = NSAttributedString(string: "Password",
                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
@@ -108,30 +110,42 @@ class ViewController: UIViewController {
     
     @objc func handleLogin(){
         
-        if !(emailTextField.text?.isEmpty)! && !(passwordTextField.text?.isEmpty)! {
-            
-            let email = emailTextField.text!
-            let password = passwordTextField.text!
-            
-//            AuthServices.instance.user_login(email: email, password: password) { (success) in
+        self.navigationController?.pushViewController(MyTabBarViewController(), animated: true)
+        
+//        if !(emailTextField.text?.isEmpty)! && !(passwordTextField.text?.isEmpty)! {
+//
+//            let email = emailTextField.text!
+//            let password = passwordTextField.text!
+//
+//            AuthServices.instance.vendor_login(email: email, password: password) { (success) in
 //                if(success){
-//                    print("login successful")
-//                    if(AuthServices.instance.loginstatus == "successsful"){
-//                        ToastView.shared.long(self.view, txt_msg: "User Login Successfull")
-//                    }else{
-//                        ToastView.shared.long(self.view, txt_msg: "Login Failed")
-//                    }
-//                    
+////                    ToastView.shared.long(self.view, txt_msg: "User Login Successfull")
+//                    self.navigationController?.pushViewController(MainViewController(), animated: true)
 //                }else{
 //                    print("login not successful")
 //                    ToastView.shared.long(self.view, txt_msg: "Login Failed")
 //                }
 //            }
-            
-        }
-        else{
-            ToastView.shared.short(self.view, txt_msg: "Enter all fields")
-        }
+//
+////            AuthServices.instance.user_login(email: email, password: password) { (success) in
+////                if(success){
+////                    print("login successful")
+////                    if(AuthServices.instance.loginstatus == "successsful"){
+////                        ToastView.shared.long(self.view, txt_msg: "User Login Successfull")
+////                    }else{
+////                        ToastView.shared.long(self.view, txt_msg: "Login Failed")
+////                    }
+////
+////                }else{
+////                    print("login not successful")
+////                    ToastView.shared.long(self.view, txt_msg: "Login Failed")
+////                }
+////            }
+//
+//        }
+//        else{
+//            ToastView.shared.short(self.view, txt_msg: "Enter all fields")
+//        }
         
     }
     

@@ -238,7 +238,7 @@ class SignUpVendorViewController: UIViewController {
             if addressTextField.text!.count >= 5 && phoneNumberTextField.text!.count >= 5{
                 if addressTextField.text! == phoneNumberTextField.text!{
                     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-                    navigationController?.navigationBar.tintColor = .black;
+                    navigationController?.navigationBar.tintColor = .black
 
 //                    print("email: \(userInstance.email)")
 //                    AuthServices.instance.user_checkEmail(email: userInstance.email) { (success) in
