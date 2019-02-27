@@ -15,7 +15,8 @@
 		186F314822255BF00021AE98 /* redeemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314722255BF00021AE98 /* redeemViewController.swift */; };
 		186F314A22255C000021AE98 /* savedDealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314922255C000021AE98 /* savedDealsViewController.swift */; };
 		186F314C22255C280021AE98 /* accountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314B22255C280021AE98 /* accountsViewController.swift */; };
-		186F314E222560AB0021AE98 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314D222560AB0021AE98 /* UserCell.swift */; };
+		186F314E222560AB0021AE98 /* EndingSoonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F314D222560AB0021AE98 /* EndingSoonCell.swift */; };
+		186F315122269FEF0021AE98 /* OngoingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F315022269FEF0021AE98 /* OngoingCell.swift */; };
 		188B04D82200574D00EB89C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B04D72200574D00EB89C0 /* AppDelegate.swift */; };
 		188B04DA2200574D00EB89C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B04D92200574D00EB89C0 /* ViewController.swift */; };
 		188B04DD2200574D00EB89C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B04DB2200574D00EB89C0 /* Main.storyboard */; };
@@ -38,7 +39,8 @@
 		186F314722255BF00021AE98 /* redeemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redeemViewController.swift; sourceTree = "<group>"; };
 		186F314922255C000021AE98 /* savedDealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = savedDealsViewController.swift; sourceTree = "<group>"; };
 		186F314B22255C280021AE98 /* accountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountsViewController.swift; sourceTree = "<group>"; };
-		186F314D222560AB0021AE98 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		186F314D222560AB0021AE98 /* EndingSoonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingSoonCell.swift; sourceTree = "<group>"; };
+		186F315022269FEF0021AE98 /* OngoingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingCell.swift; sourceTree = "<group>"; };
 		188B04D42200574D00EB89C0 /* dealTymeVendor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dealTymeVendor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B04D72200574D00EB89C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188B04D92200574D00EB89C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +88,8 @@
 		186F314F222560AE0021AE98 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				186F314D222560AB0021AE98 /* UserCell.swift */,
+				186F314D222560AB0021AE98 /* EndingSoonCell.swift */,
+				186F315022269FEF0021AE98 /* OngoingCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -289,11 +292,12 @@
 				186F313D2225315B0021AE98 /* AuthServices.swift in Sources */,
 				186F314A22255C000021AE98 /* savedDealsViewController.swift in Sources */,
 				188B04ED22005BAC00EB89C0 /* ToastView.swift in Sources */,
-				186F314E222560AB0021AE98 /* UserCell.swift in Sources */,
+				186F314E222560AB0021AE98 /* EndingSoonCell.swift in Sources */,
 				186F314822255BF00021AE98 /* redeemViewController.swift in Sources */,
 				188B04D82200574D00EB89C0 /* AppDelegate.swift in Sources */,
 				188B04EE22005BAC00EB89C0 /* Extensions.swift in Sources */,
 				186F31412225326D0021AE98 /* vendorInfo.swift in Sources */,
+				186F315122269FEF0021AE98 /* OngoingCell.swift in Sources */,
 				188B04F3220063D400EB89C0 /* SignUpVendorViewController.swift in Sources */,
 				186F314422254D5F0021AE98 /* MainViewController.swift in Sources */,
 			);

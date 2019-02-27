@@ -1,7 +1,15 @@
+//
+//  OngoingCell.swift
+//  dealTymeVendor
+//
+//  Created by Apple on 27/02/2019.
+//  Copyright © 2019 devstop. All rights reserved.
+//
+
 import UIKit
 
-class UserCell: UITableViewCell {
-    
+class OngoingCell: UITableViewCell {
+
     override func layoutSubviews() {
         super.layoutSubviews()
     }
@@ -9,18 +17,18 @@ class UserCell: UITableViewCell {
     let cellMainView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-//                view.backgroundColor = .blue
-        //        view.clipsToBounds = true
+//        view.backgroundColor = .blue
+//        view.clipsToBounds = true
         view.layer.cornerRadius = 7
         view.layer.borderColor = UIColor(r: 246, g: 249, b: 248).cgColor
         view.layer.borderWidth = 2
         return view
     }()
     
-    let topView: UIView = {
+    let leftView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        //        view.backgroundColor = .green
+                view.backgroundColor = .green
         view.clipsToBounds = true
         view.layer.cornerRadius = 7
         view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -49,7 +57,7 @@ class UserCell: UITableViewCell {
         view.layer.borderColor = UIColor.white.cgColor
         view.image = UIImage(named: "price-tag2")
         view.layer.cornerRadius = 15
-//        view.contentMode = .scaleAspectFit
+        //        view.contentMode = .scaleAspectFit
         //        view.frame = CGRect(x:0, y:0, width:50, height:50)
         //        view.layer.cornerRadius =
         //        view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -279,119 +287,120 @@ class UserCell: UITableViewCell {
         cellMainView.heightAnchor.constraint(equalTo: self.heightAnchor, constant: -20).isActive = true
         cellMainView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
-        cellMainView.addSubview(topView) // , constant: 5
-        topView.topAnchor.constraint(equalTo: cellMainView.topAnchor).isActive = true
-        topView.leftAnchor.constraint(equalTo: cellMainView.leftAnchor).isActive = true
-        topView.rightAnchor.constraint(equalTo: cellMainView.rightAnchor).isActive = true
-        topView.heightAnchor.constraint(equalTo: cellMainView.heightAnchor, multiplier: 0.8).isActive = true
-        
-        cellMainView.addSubview(bottomView) // , constant: 5
-        bottomView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
-        bottomView.leftAnchor.constraint(equalTo: topView.leftAnchor).isActive = true
-        bottomView.rightAnchor.constraint(equalTo: topView.rightAnchor).isActive = true
-        bottomView.bottomAnchor.constraint(equalTo: cellMainView.bottomAnchor).isActive = true
-        
-        topView.addSubview(topImageView)
-        topImageView.topAnchor.constraint(equalTo: topView.topAnchor).isActive = true
-        topImageView.leftAnchor.constraint(equalTo: topView.leftAnchor).isActive = true
-        topImageView.rightAnchor.constraint(equalTo: topView.rightAnchor).isActive = true
-        topImageView.heightAnchor.constraint(equalTo: topView.heightAnchor, multiplier: 0.55).isActive = true
-        
-        topImageView.addSubview(dealTypeImageView)
-        dealTypeImageView.rightAnchor.constraint(equalTo: topImageView.rightAnchor, constant: -5).isActive = true
-        dealTypeImageView.topAnchor.constraint(equalTo: topImageView.topAnchor, constant: 5).isActive = true
-        dealTypeImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        dealTypeImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
-        topImageView.addSubview(companyNameLabel)
-        companyNameLabel.centerXAnchor.constraint(equalTo: topImageView.centerXAnchor).isActive = true
-        companyNameLabel.centerYAnchor.constraint(equalTo: topImageView.centerYAnchor).isActive = true
-        
-        topImageView.addSubview(companyAddressLabel)
-        companyAddressLabel.centerXAnchor.constraint(equalTo: topImageView.centerXAnchor).isActive = true
-        companyAddressLabel.topAnchor.constraint(equalTo: companyNameLabel.bottomAnchor, constant: 10).isActive = true
-        
-        topView.addSubview(dealDescriptionContainerView)
-        dealDescriptionContainerView.topAnchor.constraint(equalTo: topImageView.bottomAnchor).isActive = true
-        dealDescriptionContainerView.leftAnchor.constraint(equalTo: topView.leftAnchor).isActive = true
-        dealDescriptionContainerView.rightAnchor.constraint(equalTo: topView.rightAnchor).isActive = true
-        dealDescriptionContainerView.bottomAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
-        
-        dealDescriptionContainerView.addSubview(dealHeadingLabel)
-        //        offerText.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        dealHeadingLabel.topAnchor.constraint(equalTo: dealDescriptionContainerView.topAnchor, constant: 10).isActive = true
-        dealHeadingLabel.leftAnchor.constraint(equalTo: dealDescriptionContainerView.leftAnchor, constant: 10).isActive = true
-        //        offerText.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        
-        dealDescriptionContainerView.addSubview(dealDescriptionLabel)
-        //        offerText.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        dealDescriptionLabel.topAnchor.constraint(equalTo: dealHeadingLabel.bottomAnchor, constant: 1).isActive = true
-        dealDescriptionLabel.leftAnchor.constraint(equalTo: dealDescriptionContainerView.leftAnchor, constant: 10).isActive = true
-        //        offerText.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        dealDescriptionLabel.widthAnchor.constraint(equalTo: dealDescriptionContainerView.widthAnchor, constant: -20).isActive = true
-        dealDescriptionLabel.heightAnchor.constraint(equalTo: dealDescriptionContainerView.heightAnchor, multiplier: 0.5).isActive = true
-        
-        bottomView.addSubview(hourGlassImageView)
-        hourGlassImageView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        hourGlassImageView.leftAnchor.constraint(equalTo: bottomView.leftAnchor, constant: 10).isActive = true
-        hourGlassImageView.widthAnchor.constraint(equalToConstant: 15).isActive = true
-        hourGlassImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        
-        bottomView.addSubview(flashSaleLabel)
-        flashSaleLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        flashSaleLabel.leftAnchor.constraint(equalTo: hourGlassImageView.rightAnchor, constant: 10).isActive = true
-        //        flashSaleLabel.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        //        flashSaleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        
-        bottomView.addSubview(flashSaleHoursLabel)
-        flashSaleHoursLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        flashSaleHoursLabel.leftAnchor.constraint(equalTo: flashSaleLabel.rightAnchor, constant: 5).isActive = true
-        //        flashSaleHoursLabel.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        //        flashSaleHoursLabel.heightAnchor.constraint(equalToConstant: 16).isActive = true
-        
-        bottomView.addSubview(flashSaleHLabel)
-        flashSaleHLabel.bottomAnchor.constraint(equalTo: flashSaleHoursLabel.bottomAnchor).isActive = true
-        flashSaleHLabel.leftAnchor.constraint(equalTo: flashSaleHoursLabel.rightAnchor).isActive = true
-        //        flashSaleHLabel.widthAnchor.constraint(equalToConstant: 10).isActive = true
-        //        flashSaleHLabel.heightAnchor.constraint(equalToConstant: 10).isActive = true
-        
-        bottomView.addSubview(flashSaleMinutesLabel)
-        flashSaleMinutesLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        flashSaleMinutesLabel.leftAnchor.constraint(equalTo: flashSaleHLabel.rightAnchor, constant: 5).isActive = true
-        //        flashSaleMinutesLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        //        flashSaleMinutesLabel.heightAnchor.constraint(equalToConstant: 28).isActive = true
-        
-        bottomView.addSubview(flashSaleMLabel)
-        flashSaleMLabel.bottomAnchor.constraint(equalTo: flashSaleHoursLabel.bottomAnchor).isActive = true
-        flashSaleMLabel.leftAnchor.constraint(equalTo: flashSaleMinutesLabel.rightAnchor).isActive = true
-        //        flashSaleMLabel.widthAnchor.constraint(equalToConstant: 10).isActive = true
-        //        flashSaleMLabel.heightAnchor.constraint(equalToConstant: 10).isActive = true
-        
-        bottomView.addSubview(flashSaleSecondsLabel)
-        flashSaleSecondsLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        flashSaleSecondsLabel.leftAnchor.constraint(equalTo: flashSaleMLabel.rightAnchor, constant: 5).isActive = true
-        //        flashSaleSecondsLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        //        flashSaleSecondsLabel.heightAnchor.constraint(equalToConstant: 28).isActive = true
-        
-        bottomView.addSubview(flashSaleSLabel)
-        flashSaleSLabel.bottomAnchor.constraint(equalTo: flashSaleHoursLabel.bottomAnchor).isActive = true
-        flashSaleSLabel.leftAnchor.constraint(equalTo: flashSaleSecondsLabel.rightAnchor).isActive = true
-        //        flashSaleSLabel.widthAnchor.constraint(equalToConstant: 10).isActive = true
-        //        flashSaleSLabel.heightAnchor.constraint(equalToConstant: 10).isActive = true
-        
-        bottomView.addSubview(nextImageView)
-        nextImageView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        nextImageView.rightAnchor.constraint(equalTo: bottomView.rightAnchor, constant: -10).isActive = true
-        nextImageView.widthAnchor.constraint(equalToConstant: 10).isActive = true
-        nextImageView.heightAnchor.constraint(equalToConstant: 17).isActive = true
-        
-        bottomView.addSubview(newPriceLabel)
-        newPriceLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        newPriceLabel.rightAnchor.constraint(equalTo: nextImageView.leftAnchor, constant: -10).isActive = true
-        
-        bottomView.addSubview(oldPriceLabel)
-        oldPriceLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        oldPriceLabel.rightAnchor.constraint(equalTo: newPriceLabel.leftAnchor, constant: -10).isActive = true
+        cellMainView.addSubview(leftView) // , constant: 5
+        leftView.topAnchor.constraint(equalTo: cellMainView.topAnchor).isActive = true
+        leftView.leftAnchor.constraint(equalTo: cellMainView.leftAnchor).isActive = true
+        leftView.widthAnchor.constraint(equalTo: cellMainView.widthAnchor, multiplier: 0.25).isActive = true
+//        leftView.rightAnchor.constraint(equalTo: cellMainView.rightAnchor).isActive = true
+        leftView.heightAnchor.constraint(equalTo: cellMainView.heightAnchor, multiplier: 1).isActive = true
+
+//        cellMainView.addSubview(bottomView) // , constant: 5
+//        bottomView.topAnchor.constraint(equalTo: leftView.bottomAnchor).isActive = true
+//        bottomView.leftAnchor.constraint(equalTo: leftView.leftAnchor).isActive = true
+//        bottomView.rightAnchor.constraint(equalTo: leftView.rightAnchor).isActive = true
+//        bottomView.bottomAnchor.constraint(equalTo: cellMainView.bottomAnchor).isActive = true
+//
+//        leftView.addSubview(topImageView)
+//        topImageView.topAnchor.constraint(equalTo: leftView.topAnchor).isActive = true
+//        topImageView.leftAnchor.constraint(equalTo: leftView.leftAnchor).isActive = true
+//        topImageView.rightAnchor.constraint(equalTo: leftView.rightAnchor).isActive = true
+//        topImageView.heightAnchor.constraint(equalTo: leftView.heightAnchor, multiplier: 0.55).isActive = true
+//
+//        topImageView.addSubview(dealTypeImageView)
+//        dealTypeImageView.rightAnchor.constraint(equalTo: topImageView.rightAnchor, constant: -5).isActive = true
+//        dealTypeImageView.topAnchor.constraint(equalTo: topImageView.topAnchor, constant: 5).isActive = true
+//        dealTypeImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+//        dealTypeImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+//
+//        topImageView.addSubview(companyNameLabel)
+//        companyNameLabel.centerXAnchor.constraint(equalTo: topImageView.centerXAnchor).isActive = true
+//        companyNameLabel.centerYAnchor.constraint(equalTo: topImageView.centerYAnchor).isActive = true
+//
+//        topImageView.addSubview(companyAddressLabel)
+//        companyAddressLabel.centerXAnchor.constraint(equalTo: topImageView.centerXAnchor).isActive = true
+//        companyAddressLabel.topAnchor.constraint(equalTo: companyNameLabel.bottomAnchor, constant: 10).isActive = true
+//
+//        leftView.addSubview(dealDescriptionContainerView)
+//        dealDescriptionContainerView.topAnchor.constraint(equalTo: topImageView.bottomAnchor).isActive = true
+//        dealDescriptionContainerView.leftAnchor.constraint(equalTo: leftView.leftAnchor).isActive = true
+//        dealDescriptionContainerView.rightAnchor.constraint(equalTo: leftView.rightAnchor).isActive = true
+//        dealDescriptionContainerView.bottomAnchor.constraint(equalTo: leftView.bottomAnchor).isActive = true
+//
+//        dealDescriptionContainerView.addSubview(dealHeadingLabel)
+//        //        offerText.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+//        dealHeadingLabel.topAnchor.constraint(equalTo: dealDescriptionContainerView.topAnchor, constant: 10).isActive = true
+//        dealHeadingLabel.leftAnchor.constraint(equalTo: dealDescriptionContainerView.leftAnchor, constant: 10).isActive = true
+//        //        offerText.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+//
+//        dealDescriptionContainerView.addSubview(dealDescriptionLabel)
+//        //        offerText.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+//        dealDescriptionLabel.topAnchor.constraint(equalTo: dealHeadingLabel.bottomAnchor, constant: 1).isActive = true
+//        dealDescriptionLabel.leftAnchor.constraint(equalTo: dealDescriptionContainerView.leftAnchor, constant: 10).isActive = true
+//        //        offerText.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+//        dealDescriptionLabel.widthAnchor.constraint(equalTo: dealDescriptionContainerView.widthAnchor, constant: -20).isActive = true
+//        dealDescriptionLabel.heightAnchor.constraint(equalTo: dealDescriptionContainerView.heightAnchor, multiplier: 0.5).isActive = true
+//
+//        bottomView.addSubview(hourGlassImageView)
+//        hourGlassImageView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        hourGlassImageView.leftAnchor.constraint(equalTo: bottomView.leftAnchor, constant: 10).isActive = true
+//        hourGlassImageView.widthAnchor.constraint(equalToConstant: 15).isActive = true
+//        hourGlassImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+//
+//        bottomView.addSubview(flashSaleLabel)
+//        flashSaleLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        flashSaleLabel.leftAnchor.constraint(equalTo: hourGlassImageView.rightAnchor, constant: 10).isActive = true
+//        //        flashSaleLabel.widthAnchor.constraint(equalToConstant: 70).isActive = true
+//        //        flashSaleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+//
+//        bottomView.addSubview(flashSaleHoursLabel)
+//        flashSaleHoursLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        flashSaleHoursLabel.leftAnchor.constraint(equalTo: flashSaleLabel.rightAnchor, constant: 5).isActive = true
+//        //        flashSaleHoursLabel.widthAnchor.constraint(equalToConstant: 25).isActive = true
+//        //        flashSaleHoursLabel.heightAnchor.constraint(equalToConstant: 16).isActive = true
+//
+//        bottomView.addSubview(flashSaleHLabel)
+//        flashSaleHLabel.bottomAnchor.constraint(equalTo: flashSaleHoursLabel.bottomAnchor).isActive = true
+//        flashSaleHLabel.leftAnchor.constraint(equalTo: flashSaleHoursLabel.rightAnchor).isActive = true
+//        //        flashSaleHLabel.widthAnchor.constraint(equalToConstant: 10).isActive = true
+//        //        flashSaleHLabel.heightAnchor.constraint(equalToConstant: 10).isActive = true
+//
+//        bottomView.addSubview(flashSaleMinutesLabel)
+//        flashSaleMinutesLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        flashSaleMinutesLabel.leftAnchor.constraint(equalTo: flashSaleHLabel.rightAnchor, constant: 5).isActive = true
+//        //        flashSaleMinutesLabel.widthAnchor.constraint(equalToConstant: 35).isActive = true
+//        //        flashSaleMinutesLabel.heightAnchor.constraint(equalToConstant: 28).isActive = true
+//
+//        bottomView.addSubview(flashSaleMLabel)
+//        flashSaleMLabel.bottomAnchor.constraint(equalTo: flashSaleHoursLabel.bottomAnchor).isActive = true
+//        flashSaleMLabel.leftAnchor.constraint(equalTo: flashSaleMinutesLabel.rightAnchor).isActive = true
+//        //        flashSaleMLabel.widthAnchor.constraint(equalToConstant: 10).isActive = true
+//        //        flashSaleMLabel.heightAnchor.constraint(equalToConstant: 10).isActive = true
+//
+//        bottomView.addSubview(flashSaleSecondsLabel)
+//        flashSaleSecondsLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        flashSaleSecondsLabel.leftAnchor.constraint(equalTo: flashSaleMLabel.rightAnchor, constant: 5).isActive = true
+//        //        flashSaleSecondsLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+//        //        flashSaleSecondsLabel.heightAnchor.constraint(equalToConstant: 28).isActive = true
+//
+//        bottomView.addSubview(flashSaleSLabel)
+//        flashSaleSLabel.bottomAnchor.constraint(equalTo: flashSaleHoursLabel.bottomAnchor).isActive = true
+//        flashSaleSLabel.leftAnchor.constraint(equalTo: flashSaleSecondsLabel.rightAnchor).isActive = true
+//        //        flashSaleSLabel.widthAnchor.constraint(equalToConstant: 10).isActive = true
+//        //        flashSaleSLabel.heightAnchor.constraint(equalToConstant: 10).isActive = true
+//
+//        bottomView.addSubview(nextImageView)
+//        nextImageView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        nextImageView.rightAnchor.constraint(equalTo: bottomView.rightAnchor, constant: -10).isActive = true
+//        nextImageView.widthAnchor.constraint(equalToConstant: 10).isActive = true
+//        nextImageView.heightAnchor.constraint(equalToConstant: 17).isActive = true
+//
+//        bottomView.addSubview(newPriceLabel)
+//        newPriceLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        newPriceLabel.rightAnchor.constraint(equalTo: nextImageView.leftAnchor, constant: -10).isActive = true
+//
+//        bottomView.addSubview(oldPriceLabel)
+//        oldPriceLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        oldPriceLabel.rightAnchor.constraint(equalTo: newPriceLabel.leftAnchor, constant: -10).isActive = true
         
     }
     
@@ -402,4 +411,5 @@ class UserCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }

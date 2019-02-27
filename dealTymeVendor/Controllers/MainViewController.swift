@@ -12,6 +12,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 //    let userInstance = UserInfo.sharedInstance
     let cellId = "cellId"
+    let cellId1 = "cellId123"
     var namesArray = [String]()
     var resultArray = [String]()
 //    let locationManager = CLLocationManager()
@@ -65,16 +66,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 0:
             segmentedControlBottomLine1.isHidden = false
             segmentedControlBottomLine2.isHidden = true
-            print("0 index \(segmentedControlBottomLine1.isHidden)")
-            print("0 index \(segmentedControlBottomLine2.isHidden)")
             self.myTableView.isHidden = false
             setupViews()
         case 1:
             segmentedControlBottomLine1.isHidden = true
             segmentedControlBottomLine2.isHidden = false
-            print("1 index \(segmentedControlBottomLine1.isHidden)")
-            print("1 index \(segmentedControlBottomLine2.isHidden)")
-            self.myTableView.isHidden = true
+            self.myTableView.isHidden = false
             setupViews2()
         default:
             break
@@ -108,7 +105,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.myTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         topBarHeight = UIApplication.shared.statusBarFrame.size.height +
             (self.navigationController?.navigationBar.frame.height ?? 0.0)
-        myTableView.register(UserCell.self, forCellReuseIdentifier: cellId)
+        myTableView.register(EndingSoonCell.self, forCellReuseIdentifier: cellId)
+        myTableView.register(OngoingCell.self, forCellReuseIdentifier: cellId1)
         setupViews()
     }
     
@@ -153,12 +151,46 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         myTableView.topAnchor.constraint(equalTo: segmentedControlBottomLine2.bottomAnchor, constant: 2).isActive = true
         myTableView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         myTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
+        self.myTableView.reloadData()
     }
     
     func setupViews2(){
+        
         print("2nd setupView")
-//        self.myMapView.addSubview(mapView)
+        view.addSubview(segmentedControl)
+        segmentedControl.topAnchor.constraint(equalTo: view.topAnchor, constant: topBarHeight).isActive = true
+        segmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        segmentedControl.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        segmentedControl.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        view.addSubview(segmentedControlBottomLine1)
+        segmentedControlBottomLine1.bottomAnchor.constraint(equalTo: segmentedControl.bottomAnchor).isActive = true
+        segmentedControlBottomLine1.widthAnchor.constraint(equalToConstant: view.frame.width/2.0).isActive = true
+        segmentedControlBottomLine1.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        segmentedControlBottomLine1.rightAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        segmentedControlBottomLine1.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
+        view.addSubview(segmentedControlBottomLine2)
+        segmentedControlBottomLine2.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: -1).isActive = true
+        segmentedControlBottomLine2.widthAnchor.constraint(equalToConstant: view.frame.width/2.0).isActive = true
+        segmentedControlBottomLine2.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        segmentedControlBottomLine2.leftAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        segmentedControlBottomLine2.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
+        view.addSubview(lineSeparator1)
+        lineSeparator1.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 0).isActive = true
+        lineSeparator1.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        lineSeparator1.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        lineSeparator1.heightAnchor.constraint(equalToConstant: 2).isActive = true
+        //
+        view.addSubview(myTableView)
+        myTableView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        myTableView.topAnchor.constraint(equalTo: segmentedControlBottomLine2.bottomAnchor, constant: 2).isActive = true
+        myTableView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        myTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        self.myTableView.reloadData()
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -166,18 +198,35 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = myTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
-        cell.dealHeadingLabel.text = "Happy Monday!"
-        cell.dealDescriptionLabel.text = "Monday means a new Starbucks Deal! Don't miss out on these awesome deals starting every monday every week. See you at Starbucks soon, Have a nice day!"
-        if indexPath.row == 2{
-            cell.dealTypeImageView.image = UIImage(named: "time-left2")
+        
+        if(segmentedControl.selectedSegmentIndex == 0){
+            let cell = myTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! EndingSoonCell
+            cell.dealHeadingLabel.text = "Happy Monday!"
+            cell.dealDescriptionLabel.text = "Monday means a new Starbucks Deal! Don't miss out on these awesome deals starting every monday every week. See you at Starbucks soon, Have a nice day!"
+            if indexPath.row == 2{
+                cell.dealTypeImageView.image = UIImage(named: "time-left2")
+            }
+            return cell
+        }else{
+            let cell = myTableView.dequeueReusableCell(withIdentifier: cellId1, for: indexPath) as! OngoingCell
+//            cell.dealHeadingLabel.text = "Happy Monday123123!"
+//            cell.dealDescriptionLabel.text = "Monday means a new Starbucks Deal! Don't miss out on these awesome deals starting every monday every week. See you at Starbucks soon, Have a nice day!"
+//            if indexPath.row == 2{
+//                cell.dealTypeImageView.image = UIImage(named: "time-left2")
+//            }
+            return cell
         }
-        //        cell.flashSaleHoursLabel.text = " h m s"
-        return cell
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.view.frame.height/2.5
+        
+        if(segmentedControl.selectedSegmentIndex == 0){
+            return self.view.frame.height/2.5
+        }
+        else{
+            return self.view.frame.height/4.75
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
